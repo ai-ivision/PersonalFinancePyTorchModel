@@ -41,7 +41,7 @@ PERSONALFINANCECLASSIFIER/
 ├── evaluate.py              # Evaluation script
 ├── requirements.txt         # Python dependencies
 └── README.md                # This file
-
+```
 ## Usage
 1. Place your CSV in `data/`
 2. Adjust configs in `configs/config.yaml`
