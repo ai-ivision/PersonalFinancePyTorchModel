@@ -1,0 +1,29 @@
+model:
+  # List of units in each hidden (fully-connected) layer; controls model capacity and depth
+  hidden_dims: [128, 64, 32]
+  # Dropout rate used on hidden layers to prevent overfitting (fraction of neurons dropped per forward-pass)
+  dropout: 0.25
+
+training:
+  # Number of samples per batch during gradient updates (tradeoff: memory use vs. convergence stability/speed)
+  batch_size: 256
+  # Total number of passes over the training data; higher epochs = more training (watch for overfitting)
+  epochs: 30
+  # Learning rate for the optimizer; higher values speed up training but risk instability, lower values are safer but slower
+  lr: 0.001
+  # Device used for model computation ('cuda' = GPU acceleration if available, 'cpu' otherwise)
+  device: cuda
+
+dataset:
+  # Path to the input CSV dataset file; should include all required columns and formatting
+  csv_path: ./data/personalFinanceDataset.csv
+  # Fraction of the data to reserve as validation/test set (the rest for training) — usually 0.1–0.3 in practice
+  test_size: 0.2
+  # Seed for random number generators; ensures reproducible dataset splits and consistent experiments
+  random_state: 42
+
+logging:
+  # Directory where log files (training progress, metrics) will be saved; useful for monitoring and debugging
+  log_dir: ./logs/
+  # Directory where model checkpoints (saved weights for each epoch, or best model) are stored for recovery or deployment
+  checkpoint_dir: ./checkpoints/

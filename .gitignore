@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+logs/
+*.log
+
+# Checkpoint and model files
+checkpoints/
+*.pth
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+PFC/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# Pickle files
+*.pkl
+
+# macOS metadata
+.DS_Store
+
+# Python dependency and build files
+*.egg-info/
+dist/
+build/
+
+# pytest cache
+.pytest_cache/
+
+# Temporary/backup files
+*.tmp
+*.bak
+*.swp
